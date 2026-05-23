@@ -1,0 +1,8 @@
+{
+  "name": "Remix: YouTube TV",
+  "description": "A highly optimized Android TV web wrapper for YouTube designed for low-resource TV environments and internet-restricted settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

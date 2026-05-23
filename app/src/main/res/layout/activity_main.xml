@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- The YouTube full-screen web wrapper -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Centered Loading Progress Bar (Material styled) -->
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="#FF0000"
+        android:visibility="visible" />
+
+    <!-- Auto Translate to Sinhala Button Overlay -->
+    <Button
+        android:id="@+id/btnTranslateSinhala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#CC1111"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/btn_auto_translate_sinhala"
+        android:textAllCaps="false"
+        android:focusable="true"
+        android:visibility="visible" />
+
+    <!-- Smart TV Error Overlay: Navigable with D-pad -->
+    <LinearLayout
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#121212"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone">
+
+        <!-- Custom high-contrast TV iconography -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📺"
+            android:textSize="56sp"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigation / Load issue"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/errorDetailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YouTube was unable to respond. Select a layout option below."
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- TV remote focusable action buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnRetryTV"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF"
+                android:text="Retry TV Layout"
+                android:focusable="true"/>
+
+            <Button
+                android:id="@+id/btnLoadStandard"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#333333"
+                android:textColor="#FFFFFF"
+                android:text="Load Standard Web"
+                android:focusable="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
